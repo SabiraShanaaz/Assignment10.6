@@ -1,0 +1,3 @@
+Number of readings given by each weather station according to the dataset.
+
+SELECT station,count(*) FROM temp_data GROUP BY station;

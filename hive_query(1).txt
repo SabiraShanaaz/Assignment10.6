@@ -1,0 +1,4 @@
+Minimum temperature observed in a given weather station in a particular year.
+
+SELECT YEAR(TO_DATE(FROM_UNIXTIME(UNIX_TIMESTAMP(date,'yyyymmdd')))) as date,MIN(temperature) AS min_temp ,station FROM 
+temp_data GROUP BY YEAR(TO_DATE(FROM_UNIXTIME(UNIX_TIMESTAMP(date,'yyyymmdd')))),station; 
